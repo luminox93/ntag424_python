@@ -6,7 +6,7 @@ from binascii import hexlify
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '../src')))
 
 def verify_packet_structures():
-    print("=== 🧪 패킷 구조 검증 (Plain vs Encrypted) ===\n")
+    print("=== 🧪 패킷 구조 검증 (평문 vs 암호화) ===\n")
 
     # 공통 설정
     uid_offset = 32
@@ -43,7 +43,7 @@ def verify_packet_structures():
     
     # =================================================================
     # Case 2: 암호화 미러링 (우리가 Main에서 쓸 것)
-    # [cite_start]조건: MetaRead 권한이 '0~4'(Key) 일 때 [cite: 2179-2180]
+    # 조건: MetaRead 권한이 '0~4'(Key) 일 때
     # =================================================================
     print("\n[Case 2] 암호화 미러링 (실전용)")
     
